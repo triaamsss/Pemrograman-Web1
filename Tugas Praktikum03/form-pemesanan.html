@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Pizza</title>
+</head>
+<body>
+    <h1>Black Gose Bistro | Pizza-on-Demand</h1>
+    <p>Our 12 Word-fired Pizzas are available for delivery. 
+        Build your custom pizza and we'll deliver it within an hour</p>
+    <hr>
+   <form  action="">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2">Your Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td>: <input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address</label></td>
+                    <td>: <input type="text" id="address"></td>
+                </tr>
+                <tr>
+                    <td><label for="Telephone Number">Telephone Number</label></td>
+                    <td>: <input type="number" id="Telephone Number"></td>
+                </tr>
+                <tr>
+                    <td><label for="Email">Email</label></td>
+                    <td>: <input type="email" id="Email"></td>
+                </tr>
+                <tr>
+                    <td><label for="Deskripsi">Delivery Instruction</label></td>
+                    <td>: <textarea type="text" id="Deskripsi" ></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+        <fieldset>
+            <legend>Design Your Dream Pizza</legend>
+            <h4>Crust (Choose One):</h4>
+            <ul style="list-style-type: none;">
+                <li>
+                    <input type="radio" id="classic" name="crust">
+                    <label for="classic">Classic White</label>
+                </li>
+                <li>
+                    <input type="radio" id="multigrain" name="crust">
+                    <label for="multigrain">Multigrain</label>
+                </li>
+                <li>
+                    <input type="radio" id="Cheese" name="crust">
+                    <label for="Cheese">Cheese-stuffed Crust</label>
+                </li>
+                <li>
+                    <input type="radio" id="Gluten" name="crust">
+                    <label for="Gluten">Gluten-Free</label>
+                </li>
+            </ul>
+            <h4>Topping (Choose as many as you want):</h4>
+            <ul style="list-style-type: none;">
+                <li>
+                    <input type="checkbox" id="white" name="crust">
+                    <label for="white">Red Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="multigrain" name="crust">
+                    <label for="multigrain">White Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="Cheese" name="crust">
+                    <label for="Cheese">Mozarella Cheese</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="peperoni" name="crust">
+                    <label for="peperoni">Pepperoni</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="jarum" name="crust">
+                    <label for="jarum">Mushrooms</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="peppers" name="crust">
+                    <label for="peppers">Peppers</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="ancor" name="crust">
+                    <label for="ancor">anchovies</label>
+                </li>
+            </ul>
+            <h4>Number</h4>
+            <label for="count">How many Pizza:</label>
+            <input type="number" id="count">
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+</body>
+</html>
