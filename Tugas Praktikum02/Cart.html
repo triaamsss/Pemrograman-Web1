@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <style>
+        a:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body style="background-color: #ffcdd2; margin:0;">
+<!--------------------------------- Membuat bagian Judul ------------------------------------------------------->
+    <div class="header" style="background-color: #ab000d;">
+        <table>
+            <tr>
+                <td><h4 style="padding-right: 50px;padding-left:25px; color:white;">TOKIA</h4></td>
+                <td><a href="#" style="color: white; text-decoration: none;">Category 1</a></td>
+                <td><a href="#" style="color: white; margin-left:50px; text-decoration: none;">Category 2</a></td>
+                <td><a href="#" style="color: white; margin-left:50px; text-decoration: none;">Category 3</a></td>
+            </tr>
+            <tr>
+                <p  style="float:right;margin-right: 30px; margin-left: 15px;">Cart</p>
+                <img src="img/NicePng_cart-png-images_2534370.png"  width="20px" height="20px" 
+                style="float: right;margin-left: 10px;margin-top: 15px;">
+                <img src="img/searchpngwing.com.png"  width="20px" height="20px" 
+                style="float: right;margin-left: 27px; margin-top: 15px;">
+            </tr>
+        </table>
+    </div> 
+<!------------------------------- Membuat Tulisan Your Cart -------------------------------------------->
+    <div style="padding:25px; width: 40%; margin-left: 15px;margin-top: 30px;">
+        <table>
+            <div class="cart" style="margin-top:15px;">
+                <tr>
+                    <td><h2 style="margin-top: 15px;"><b>
+                        Your Cart</h2><b></td>
+                        </tr>
+                    </table>
+<!------------------------------- Membuat Table Item ---------------------------------------------------->
+                    <table border: 1px solid black style="border-bottom-style: solid; 
+                    border-top-style: solid; bottom-collapse:collapse;" width="500px;">
+                    <tr>
+                        <th align="left"><b>Item</b></th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/limitededition.png" alt="" style="width: 100px; height: 100px;"></td>
+                            <td><h3 style="padding-left:75px;">$20.00</h3></td>
+                            <td style="padding-left:150px ;"><select name="number" id="number">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+        </table>
+        <table border: 1px solid black style="border-bottom-style: solid; border-top-style: solid; bottom-collapse:collapse; " width="500px;">
+            <tr>
+                <th align="right" colspan="3">Subtotal $20.00</th>
+            </tr>
+        </table>
+    </div>
+<!---------------------------------- Membuat Bagian Summary ---------------------------------------------------->
+    <div style="padding:50px; float: right; position:absolute; top:0; right:0; margin-top: 100px;">
+        <table  style="border-collapse: collapse; margin-right: 15px;">
+            <thead style="background-color:#e53935;">
+                <tr>
+                    <th style="padding-right: 400px; padding-left: 25px;"><h3>Summary 1 Item </h3></th>
+                    <th>   
+                    </th>
+                </tr>
+            </thead>
+            <tbody style="background-color: #e53935;">
+                <tr >
+                    <td style="padding-left: 25px">Subtotal</td>
+                    <td style="padding-right: 10px;">$20.00</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 25px;">Shipping</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 25px;">Est. Taxes</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><hr></td>
+                    <td><hr></td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 25px;">Total</td>
+                    <td>$20.00</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: #ab000d" align="center"><h3 style="color:white ;">
+                    <a href=""></a>Checkout</a></h3></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+<!------------------------------------ Membuat Bagian Footer ---------------------------------------------------->
+<div class="footer" style="background-color: #ab000d; margin-top: 150px;">
+    <table>
+        <tr>
+            <td><h4 style="color: white; margin-right: 50px;padding-left: 15px;">Site Name</h4></td>
+            <td><a href="" style="color: white;text-decoration: none;">Category X</td>
+                <td><a href="" style="color: white;text-decoration: none;margin-left: 50px;">Category Y</a></td>
+                <td><a href="" style="color: white;text-decoration: none;margin-left: 50px;">Category Z</a></td>
+                <td colspan="2" width="400px"></td>
+                <td colspan="2"><h3>Stay In Touch! Join our Newsleter.</h3></td>
+            </tr>
+            <tr>
+                <td><img src="img/logo visa.png" alt="" width="30px" style="padding-left: 20px;"></td>
+                <td><img src="img/Mastercard-Logo-PNG1.png" alt="" width="30px" style="padding-right: 70px;"></td>
+                <td><img src="img/logo-bcapng-32727.png" alt="" width="30px" style="padding-left: 50px;"></td>
+                <td colspan="3"></td>
+                <td><form action="">
+                    <input type="text" value="Enjoy Email">
+                    <input type="text" value="Subscribe" style="float: right;">
+                </form></td>
+            </tr>
+        </div>
+        </table>
+</body>
+</html>
