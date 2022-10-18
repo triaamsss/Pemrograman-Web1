@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Barang</title>
+</head>
+<body style="margin-top: 0; margin-left: 0;" >
+  <form action="Hasil-Pemesanan-Barang.html">
+  <table style="border:1px solid black; padding-bottom: 10px; background-color:darkcyan;" width="100%;">
+      <tr>
+          <th>Home |</th>
+          <th>Generate Link |</th>
+          <th>Transaction History |</th>
+          <th>Policy |</th>
+          <th>Logout </th>
+      </tr>
+  </table>
+  <table style="padding-top: 15px; padding-right: 150px; padding-left: 10px; float: left;">
+    <tr>
+        <td><img src="img/pngwing.com (1).png" alt="" width="200px">
+        <br><br>
+        <button type="submit">Upload Picture</button></td>
+    </tr>
+  </table>
+  <table style="padding-left: 30px; padding-top: 15px;">
+      <tr>
+        <td><label for="Title">Title Here :</label></td>
+        <td><input type="text" id="Title" placeholder="Title Here" ></td>
+      </td>
+      <tr>
+        <td><label for="description">Description :</label></td>
+        <td><textarea name="description" id="description"  rows="7" cols="10" style="padding-left: 0px;">
+Year : 
+
+Model :
+
+Condition :
+        </textarea>
+      </td>
+      </tr>
+      <tr>
+        <td><label for="Account">Account Number :</label></td>
+        <td><input type="number" id="Account" placeholder="Account Number"></td>
+      </tr>
+      <tr>
+        <td><label for="Bank">Bank :</label></td>
+        <td><select name="Bank" id="Bank">
+          <option value="Mandiri">Mandiri</option>
+          <option value="BSI">BSI</option>
+          <option value="BCA">BCA</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><label for="ACH">Account Holder :</label></td>
+        <td><input type="text" id="ACH" placeholder="Account Holder"></td>
+      </tr>
+      <tr>
+        <td><label for="Transaction">Transaction :</label></td>
+        <td><input type="number" id="Transaction" max="3" min="1" style="width: 30px;"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><p>*if the Transaction is for 3 person, choose 3 from the drop-down list</p></td>
+      </tr>
+      <tr>
+       <td></td>
+       <td><input type="checkbox">Sent to mobile phone</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input type="checkbox">Sent to Email</td>
+      </tr>
+      <tr>
+        <td><label for="Mobile Phone">Send to Mobile Phone :</label></td>
+        <td><input type="text" id="Mobile Phone"></td>
+      </tr>
+      <tr>
+        <td><label for="Email">Send to Email :</label></td>
+        <td><input type="email" id="Email"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" style="margin-top: 20px; background-color: green;">Generate Nabr Link!</button></td>
+      </tr>
+  </table>
+</form>
+</body>
+</html>
