@@ -1,0 +1,48 @@
+body {
+    background-color: #FFF8EA;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.judul h1 {
+    text-align: center;
+}
+.judul h3 {
+    text-align: center;
+}
+.menu ul {
+   background-color:  #9E7676;
+   justify-content: center;
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   gap: 600px;
+   font-size: 30px;
+   padding: 20px;
+}
+.foto {
+    text-align: center;
+}
+.fp::first-letter{
+    font-size: 50px;
+    color: blueviolet;
+}
+#profil h2 {
+    text-align: center;
+    font-size: 40px;
+}
+.koleksi {
+    text-align: center;
+    background-color: #9E7676;
+}
+.koleksi h3 {
+    font-size: 40px;
+    color: white;
+}
+.koleksi h2 {
+    font-size: 20px;
+}
+.koleksi img {
+    width: 20%;
+}
+.harga-coret {
+    text-decoration: line-through;
+}
