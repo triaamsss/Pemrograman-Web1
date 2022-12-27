@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validasi</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs-rupiah.html">Nomor 2</a></li>
+                <li><a href="chatbox.html">Nomor 3</a></li>
+                <li><a href="image-picker.html">Nomor 4</a></li>
+                <li><a href="form.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <form action="" onsubmit="submitData(event)">
+            <label for="nama">Nama Pelanggan</label><br />
+            <input type="text" id="nama" placeholder="Masukan Nama"><br />
+            <div id="nama_pelanggan">
+            </div>
+            <label for="email">Email</label><br />
+            <input type="text" id="email" placeholder="example@gmail.com"><br />
+            <div id="nama_email">
+            </div>
+            <label for="jam">Jam Keberangkatan</label><br />
+            <input type="text" id="jam" placeholder="22.00"><br />
+            <div id="nama_jam">
+            </div>
+            <label for="tujuan">Tujuan Keberangkatan</label><br />
+            <select id="tujuan" width="300px">
+                <option value="">---PILIH---</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bogor">Bogor</option>
+                <option value="Depok">Depok</option>
+                <option value="Tanggerang">Tanggerang</option>
+                <option value="Bekasi">Bekasi</option>
+            </select><br />
+            <div id="nama_tujuan">
+            </div>
+            <label for="tiket">Jumlah Tiket</label><br />
+            <input type="number" id="tiket" placeholder="Jumlah"><br /><br />
+            <div id="nama_tiket">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="output">
+            
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        
+        function submitData(e){
+        const name = document.getElementById("nama").value
+            e.preventDefault()
+            let nama_validasi = ""
+            if(name.length <= 0 ){
+                nama_validasi = "Nama Tidak Boleh Kosong"
+            }else if (name.length > 30){
+                nama_validasi = "Nama Tidak Lebih Dari 30 Karakter"
+            }
+        const nama_pelanggan = document.getElementById("nama_pelanggan")
+        nama_pelanggan.innerHTML = null
+        nama_pelanggan.innerHTML += `<div class="text-red">
+        ${nama_validasi}
+    </div>`
+            console.log(name.length)
+
+            const email = document.getElementById("email").value
+            const gmail = email.indexOf("@");
+	        const dots = email.lastIndexOf(".");
+            let email_validasi = ""
+            if (email.length <= 0){
+                email_validasi = "Email Tidak Boleh kosong"
+            }
+            else if (gmail<1 || dots<gmail+2 || dots+2>=email.length){
+                email_validasi = "Alamat email tidak valid"
+            }
+            const nama_email = document.getElementById("nama_email")
+            nama_email.innerHTML = null
+            nama_email.innerHTML += `<div class="text-red">
+        ${email_validasi}
+    </div>`
+
+            const jam = document.getElementById("jam").value
+            let jam_validasi = ""
+            if(isNaN(jam)){
+            jam_validasi = "tidak boleh input huruf"
+            } else if(jam.length <= 0){
+            jam_validasi = "tidak boleh kosong"
+            }// else if(kondisi inputan jam harus misal 00.00){
+            // blabla
+            // }
+            const nama_jam = document.getElementById("nama_jam")
+            nama_jam.innerHTML = null
+            nama_jam.innerHTML += `<div class="text-red">
+        ${jam_validasi}
+    </div>`
+
+            const tujuan = document.getElementById("tujuan").value
+            let tujuan_validasi = ""
+            if(tujuan.length <= 0){
+                tujuan_validasi = "Tujuan Harus Dipilih"
+            }
+            const nama_tujuan = document.getElementById("nama_tujuan")
+            nama_tujuan.innerHTML = null
+            nama_tujuan.innerHTML += `<div class="text-red">
+        ${tujuan_validasi}
+    </div>`
+
+            const tiket = document.getElementById("tiket").value
+            let tiket_validasi = ""
+            if(tiket <= 0){
+                tiket_validasi = "Mesen Tiket Minimal 1"
+            } else if(tiket >= 10){
+                tiket_validasi = "Tidak Bisa Memesan Lebih Dari 10 Tiket"
+            }
+            const nama_tiket = document.getElementById("nama_tiket")
+            nama_tiket.innerHTML = null
+            nama_tiket.innerHTML += `<div class="text-red">
+        ${tiket_validasi}
+    </div>`
+
+            const output = document.getElementById("output")
+            output.innerHTML = null
+            output.innerHTML += `<div>
+                Nama Pelanggan : ${name}
+            </div>
+            <div>
+                Email : ${email}
+            </div>
+            <div>
+                Jam Keberangkatan : ${jam}
+            </div>
+            <div>
+                Tujuan Keberangkatan : ${tujuan}
+            </div>
+            <div>
+                Jumlah Tiket : ${tiket} Buah
+            </div>`
+        }
+        
+        // function username(){
+        //     if(document.getElementById("nama").value == "")
+        //     alert("Nama Tidak Boleh Kosong")
+        //     var Max_Length = 30
+        //     var Length = document.getElementById("nama").value.length;
+        //     if (length > Max_Length){
+        //         alert("Nama Tidak Boleh Lebih Dari 30 Karakter")
+        //     }
+        //     if(document.getElementById("email").value == "")
+        //     alert("Email Tidak Boleh Kosong")
+        //     if(document.getElementById("jam").value == "")
+        //     alert("Jam Keberangkatan Tidak Boleh Kosong")
+        //     if(document.getElementById("tujuan").value == "")
+        //     alert("Kota Tujuan Tidak Boleh Kosong")
+        //     if(document.getElementById("tiket").value == "")
+        //     alert("Jumlah Tiket Tidak Boleh Kosong")
+        // }
+    </script>
+</body>
+</html>
